@@ -11,14 +11,14 @@ $(document).ready(function() {
             submitZip: function() {
                 var that = this;
 
-                var queryURL ="http://api.openweathermap.org/data/2.5/weather?zip="+ this.zipCode +",us&units=imperial&appid=810f1b099f115123133ea07badef9acb";
+                var queryURL ="https://api.openweathermap.org/data/2.5/weather?zip="+ this.zipCode +",us&units=imperial&appid=810f1b099f115123133ea07badef9acb";
                 $.ajax({
                     url:queryURL,
                     method:'GET'})
                     .done(function(response){
                         that.cWeather = response;
                     });
-                var queryURL ="http://api.openweathermap.org/data/2.5/forecast?zip="+ this.zipCode +",us&units=imperial&appid=810f1b099f115123133ea07badef9acb";
+                var queryURL ="https://api.openweathermap.org/data/2.5/forecast?zip="+ this.zipCode +",us&units=imperial&appid=810f1b099f115123133ea07badef9acb";
                 $.ajax({url:queryURL, method:'GET'})
                     .done(function(response){
                         that.fWeather = [];
